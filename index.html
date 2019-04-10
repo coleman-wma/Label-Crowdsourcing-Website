@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+Written by Bill Coleman - Apr 5, 2019
+-->
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/listeningTest.css">
+    </head>
+    <body>
+        <h1>Sound Event Perception</h1>
+
+        <div class='container'>        
+
+            <img id="ditIrc" src="images/tud_irc.jpg" alt="TUD-IRC"
+                 class="center">
+
+        </div>
+
+        <h2>Welcome Xperi & DTS Engineers.</h2>
+
+        <p>Firstly, thank you very much for your time - I know you're all busy people.</p>
+
+        <p>This experiment is about sound hierarchy.</p>
+
+        <h3>WHAT WILL TAKING PART INVOLVE?</h3>
+
+        <p> Taking part involves listening to ~100 sounds and rating them as either Background, Neutral or Foreground.</p>
+        
+        <p>This is not a forensic listening task - you won't have to detect barely noticeable artefacts.
+            There is no wrong answer. I want your first impulse decision.</p>
+        
+        <p>The sounds are no longer than 5 seconds in length. You can listen to each sound as many times as you like.
+            The experiment should take ~20 minutes to complete.</p>
+
+        <p>You must be 18 or older to participate. Please listen to the sounds
+            using headphones in a quiet environment.</p>
+
+        <p>If you have any other questions, concerns, or want to know more about this research,
+            please click the 'More Information' button.</p>
+
+        <button id="modalMoreInfoBtn" class="button buttonStart">More Information</button> 
+
+        <h3>By clicking "Start" you confirm that you have read this information and
+            you give consent to participate in this experiment.</h3>
+
+        <h3>THANK YOU!</h3>
+
+        <!--- Start button for the next step  --->
+
+        <a id="startButtonTag" href="php/consentSurvey.php" style="visibility:visible">
+            <button class="button buttonStart">Start!</button></a>
+
+        <!-- MORE INFORMATION MODAL -->
+
+        <div id="modalMoreInfo" class="modalOther">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="closeModalMoreInfo">&times;</span>
+
+
+                <h3 id="infoSpacer">WHO AM I AND WHAT IS THIS STUDY ABOUT?
+                    <img id="bill" src="images/bill.png" alt="Bill"
+                         class="floatimg"></h3>
+
+                <p>
+                    My name is William Coleman and I am a PhD candidate in the School of Computer Science, 
+                    Technological University Dublin, Ireland. Xperi/DTS sponsor my PhD in cooperation with 
+                    the Irish Research Council. My research concerns sound hierarchy perception 
+                    and how this may be used in audio content delivery.</p>
+
+                <h3>WHAT WILL TAKING PART INVOLVE?</h3>
+
+                <p>Taking part in this research will involve participating in a listening 
+                    experiment. You will be played a series of sounds and asked for your response to 
+                    them.</p>
+
+                <p>There are no ‘right’ or ‘wrong’ answers in this listening experiment – in other 
+                    words it is not you that is under test. I am interested only in your responses 
+                    to the sounds that I present.</p>
+
+                <h3>DO I HAVE TO TAKE PART?</h3>
+
+                <p>Although I naturally hope for your continued commitment to the listening 
+                    experiment, you are free to opt out of it at any time without giving a reason 
+                    and without prejudice.</p>
+
+                <h3>WHAT ARE THE POSSIBLE RISKS AND BENEFITS OF TAKING PART?</h3>
+
+                <p>Completing the listening experiment will require between ~20 minutes of 
+                    your time. During this period there is a low risk of being exposed to 
+                    excessive sound levels. At all times you will have control over the volume 
+                    level, though you will be asked to set it at the start of the experiment and not adjust 
+                    it if possible.</p>
+
+                <p>Participants with auditory disorders, such as tinnitus, may find that taking 
+                    part in the study draws attention to their disorder in a negative way. In such 
+                    an instance participants are asked to stop the listening experiment. None of the 
+                    experimental procedures to be used in this study are likely to cause any 
+                    discomfort or adverse reaction.</p>
+
+                <p>As regards the benefits of taking part, you may find the experiment interesting 
+                    and enjoy evaluating sounds and answering questions about your perception of 
+                    them. Once the study is complete it will provide information on human 
+                    perception of sounds and this may generally be of interest to audio 
+                    professionals and academics.</p>
+
+                <h3>WILL TAKING PART BE CONFIDENTIAL?</h3>
+                <p>If you agree to take part, your participation in the study will be entirely 
+                    confidential and anonymous. Any information collected will be held securely in accordance with 
+                    DIT best practices.</p>
+
+                <h3>WHAT WILL HAPPEN TO THE RESULTS OF THE STUDY?</h3>
+                <p>The study will be prepared for presentation to academic journals and 
+                    conferences. It will also form part of my PhD dissertation.</p>
+
+                <h3>WHO SHOULD YOU CONTACT FOR FURTHER INFORMATION?</h3>
+                <p>William Coleman – PhD Research Candidate - bill.coleman[at]xperi[dot]com</p>
+
+                <h3>TO PROCEED WITH THE EXPERIMENT, CLICK THE 'EXIT' BUTTON BELOW, THEN 'START!'.</h3>
+
+
+                <button id="modalMoreInfoExitBtn" class="button buttonStart">Exit</button> 
+            </div>
+        </div>
+        <script src="js/indexMoreInfo.js"></script>
+    </body>
+</html>

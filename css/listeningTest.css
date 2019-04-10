@@ -1,0 +1,542 @@
+/*
+I initially took all the .css code from the following link and then adapted 
+it as I went:
+http://www.w3schools.com/howto/howto_js_dropdown.asp
+*/
+
+/* 
+    Created on : Aug 31, 2017
+    Author     : William Coleman
+*/
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+div {
+    display: block;
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+    background: #449C65;
+    padding: 10px;
+    font-weight: 700;
+}
+
+ul li {
+    background: #CAEBD7;
+    padding: 10px;
+}
+
+/* Containers */
+
+.container {
+    position: relative;
+}
+
+.ackContainer {
+    position: relative;
+    visibility: hidden;
+}
+
+.header {
+    position: relative;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    border: 3px solid #73AD21;
+    background-color: #333;
+}
+
+.surveyDivs {
+    padding-bottom: 25px;
+}
+
+.surveyQs {
+    display: block;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+
+.surveyContent {
+    padding-bottom: 10px;
+    padding-right: 0px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+#age_{
+    padding-bottom: 10px;
+}
+
+img.floatimg {
+    float: right;
+    margin: 0 0 10px 10px;
+    height: 213px;
+}
+
+img.center {
+    display: block;
+    height: 213px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px grey;
+}
+
+img.modal_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px grey;
+}
+
+img.centerlong {
+    display: block;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px grey;
+}
+
+#progBar {
+    margin-bottom: 30px;
+}
+
+audio.audioStimFile {
+    display: block; /* change this to block */
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.audioContainer {
+    display: block;
+    padding: 15px 32px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    background-color: #95B9C7;
+}
+
+.likertLayoutBlock {
+    display: table;
+    /* border: 2px solid black; */
+    width: 100%;
+}
+
+.likertLayoutCell {
+    display: table-cell;
+    padding: 5px 5px;
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 16px;
+    vertical-align: middle;
+    width: 16.66%;
+    /*
+    Comment this in to preserve equal width between labels and likert scale to
+    extremely narrow windows. It will break at any point on a word, so this tends
+    to look silly at normal widths [it will break in the middle of a word as opposed
+    to at the end of a word]
+    
+    word-break: break-all;
+    */
+}
+
+/* --- w3 schools styling --- */
+
+/*.w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,
+.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+.w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.w3-bar:before,
+.w3-bar:after {
+    content:"";
+    display: inline-block;  was table 
+    clear:both;
+}*/
+
+#audioStimContainer > div.w3-light-grey {
+    height: 18px;
+    width: 100%;
+}
+
+.w3-cell-row {
+    display:table;
+    width:100%;
+    height: min-content;
+}
+
+.w3-cell {
+    display:table-cell;
+}
+
+.w3-cell-top {
+    vertical-align:top;
+}
+
+.w3-cell-middle {
+    vertical-align:middle;
+}
+
+.w3-cell-bottom {
+    vertical-align:bottom;
+}
+
+.w3-container,.w3-panel {
+    padding:0.01em 16px;
+}
+
+.w3-panel {
+    margin-top:16px;
+    margin-bottom:16px;
+}
+
+.w3-red,.w3-hover-red:hover {
+    color:#fff!important;
+    background-color:#f44336!important;
+    text-align: right;
+    border: 1px solid #000;
+}
+
+.w3-green,.w3-hover-green:hover {
+    color:#fff!important;
+    background-color:#4CAF50!important;
+    text-align: left;
+    border: 1px solid #000;
+}
+
+.w3-green-progress {
+    color:#fff!important;
+    background-color:#4CAF50!important;
+    width: inherit;
+}
+
+.w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover {
+    color:#000!important;
+    background-color:#f1f1f1!important;
+    border: 1px solid black;
+}
+
+.w3-center {
+    text-align:center!important;
+}
+
+.w3-left {
+    float:left!important;
+}
+
+.w3-right {
+    float:right!important;
+}
+
+.s6 {
+    width:49.99999%;
+}
+
+.w3-left-align {
+    text-align:left!important;
+}
+
+.w3-right-align {
+    text-align:right!important;
+}
+
+/* --- SURVEY LAYOUT --- */
+
+.surveyLayout {
+    border: 1px solid black;
+    padding: 0.5em;
+}
+
+/* --- AUDIO PLAYER --- */
+
+#audio_controls {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #333;
+    color: #fff;
+    font-size: 28px; 
+    text-transform: uppercase;
+    height: 100%;
+    line-height: 50px;
+}
+/*
+#audio_controls { /* div 
+    /* display: relative; was inline-block 
+    height: 100%;
+    line-height: 50px;
+}*/
+
+.player-button { /* # was a .*/
+    width: 100%;
+    /* height: 50%; */
+    text-align: center;
+    cursor: pointer;
+}
+
+#audio_progress {
+    width: 150px;
+    height: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#progress {
+    position: relative;
+    background: #555;
+    width: 100%;
+    height: 100%;
+
+}
+
+.progress_bar { 
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#play_progress {
+    position: absolute;
+    background: #c795b9;
+    height: 100%; /* GAP HERE */
+}
+
+/* Headings */
+
+@keyframes flashBG {
+    from {background-color: yellow;}
+    to {background-color: #95B9C7;}
+}
+
+@-webkit-keyframes flashBG {
+    from {background-color: #95B9C7;}
+    to {background-color: yellow;}
+}
+
+p.audioLabelFlash {
+    animation-name: flashBG;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+p.audioLabelFlash {
+    -webkit-animation-name: flashBG;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease;
+}
+
+h1 {
+    background-color: #000;
+    color: #fff;
+}
+
+p.audioLabelText {
+    display: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p.ackClass {
+    display: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden;
+}
+
+/* Error */
+
+.error {
+    color: red;
+}
+
+.errorCenterText {
+    color: red;
+    text-align: center;
+}
+
+/* --- MODAL --- */
+
+/* The Modal (background) */
+.modalFirst {
+    display: block; /* Hidden by default - WAS none, block to have it display */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalOther {
+    display: none; /* Hidden by default - block to show */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    overflow: auto;
+    max-height: 80%;
+}
+
+/* The Close Buttons */
+
+.closeModalMobile {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 5px;
+    border: solid 1px black;
+    background-color: lightgray;
+    margin: 10px;
+}
+
+.closeModalMobile:hover,
+.closeModalMobile:focus {
+    /* color: #000; */
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #555555;
+    color: white;
+}
+
+.closeModalHearDef {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 5px;
+    border: solid 1px black;
+    background-color: lightgray;
+    margin: 10px;
+}
+
+.closeModalHearDef:hover,
+.closeModalHearDef:focus {
+    /* color: #000; */
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #555555;
+    color: white;
+}
+
+.closeModalMoreInfo {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 5px;
+    border: solid 1px black;
+    background-color: lightgray;
+    float: right;
+    margin: 10px;
+}
+
+.closeModalMoreInfo:hover,
+.closeModalMoreInfo:focus {
+    /* color: #000; */
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #555555;
+    color: white;
+}
+
+.closeModal {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 5px;
+    border: solid 1px black;
+    background-color: lightgray;
+    margin: 10px;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+    /* color: #000; */
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #555555;
+    color: white;
+}
+
+/* Ordered List */
+ol.d {
+    list-style-type: lower-alpha;
+}
+
+/* Buttons */
+
+.button {
+    background-color: #008CBA; /* Blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#indexSubmitForm {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.buttonStart {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.buttonStart:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.buttonTest {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.buttonTest:hover {
+    background-color: #555555;
+    color: white;
+}
