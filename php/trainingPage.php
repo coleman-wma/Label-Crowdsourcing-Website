@@ -70,7 +70,8 @@ https://www.w3schools.com/php/php_forms.asp
                 <h3>Imagine you are considering the sound as part of an overall mix.</h3>
                 
                 <p>When listening, consider whether what you hear would be mixed to a prominent position (Foreground),
-                    a non-prominent position (Background) or somewhere in between. 
+                    a non-prominent position (Background) or somewhere in between. A reminder of the category definitions 
+                    will be provided below the rating area.
                     </p>
                     
                 <h3>If you're not sure which point to pick, just select 'Neutral'.</h3>
@@ -92,19 +93,19 @@ https://www.w3schools.com/php/php_forms.asp
 
                 <p>The 'PLAY' button will look like this.</p>
 
-                <img id="PLAY_button" src="/images/PLAY_button.png" alt="play button"
+                <img id="PLAY_button" src="http://www.listeningtest.eu/EXP3/images/PLAY_button.png" alt="play button"
                      class="modal_img">
                 
                 <h3>After you listen to each audio file, pick a point for the sound you hear on the provided scale.</h3>
 
                 <p>The scale will look like this.</p>
 
-                <img id="LIKERT_scale" src="/images/LIKERT_scale.png" alt="likert scale"
+                <img id="LIKERT_scale" src="http://www.listeningtest.eu/EXP3/images/LIKERT_scale.png" alt="likert scale"
                      class="modal_img">
 
                 <p>The green progress bar will track your progress through the experiment.</p>
 
-                <img id="progBar" src="/images/progress_bar.png" alt="progress bar"
+                <img id="progBar" src="http://www.listeningtest.eu/EXP3/images/new_prog_bar.png" alt="progress bar"
                      class="modal_img">
 
                 <button id="modalPage3Btn" class="button buttonStart">Next</button> 
@@ -207,10 +208,12 @@ https://www.w3schools.com/php/php_forms.asp
 
         <!-- <span id="confirmSubjectID2" class="error"></span> -->
 
-        <h3 id="fgbgh3">For the purposes of this study, foreground and background sounds are defined as follows:</h3> 
+        <h3 id="fgbgh3">For the purposes of this study, sound categories are defined as follows:</h3> 
         <ul id="fgbgul">
-            <li>A FOREGROUND sound: A sound that should be mixed to a prominent position.</li>
-            <li>A BACKGROUND sound: A sound that does not need to be prominent in the mix.</li>
+            <li>A FOREGROUND sound: An important sound that is likely to be a focus of primary attention.</li>
+            <li>A BACKGROUND sound: A sound that is not likely to be prominent or a focus of primary attention.</li>
+            <li>A NEUTRAL sound: A sound which you cannot easily categorise as Foreground or Background (it may 
+                or may not become a focus of attention).</li>
         </ul>
 
         <p id="ack" class="ackClass">I would like to acknowledge the support of the Irish Research Council
@@ -218,14 +221,14 @@ https://www.w3schools.com/php/php_forms.asp
 
         <div id="ircLogothanks" class='ackContainer'>        
 
-            <img id="IrcLong" src="/images/IRC_logo_LONG.png" alt="IRClong"
+            <img id="IrcLong" src="http://www.listeningtest.eu/EXP3/images/IRC_logo_LONG.png" alt="IRClong"
                  class="centerlong">
 
         </div>
 
 
 
-        <script type="text/javascript" src="/js/modal.js">
+        <script type="text/javascript" src="http://www.listeningtest.eu/EXP3/js/modal.js">
 //        THIS SCRIPT contains javascript that works with elements on this page.
 //        It needs to be down here so that the elements the javascript manipulates
 //        exist when the js acts on them. I was getting null assignments when this 
