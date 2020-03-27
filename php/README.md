@@ -14,7 +14,7 @@ Create a new table on the back end.
 Posts multiple ratings to the back end at the same time.
 
 #### process.php
-
+Session management.
 
 #### readTable.php
 #### trainingPage.php
