@@ -26,3 +26,4 @@ Renders the labelling environment. Participants can play a series of sounds and 
 Validates demographic input from participants.
 
 #### writeToTable.php
+Writes numbers to a back end table which are stimulus file names. These can then be read as a participant starts a rating run.
