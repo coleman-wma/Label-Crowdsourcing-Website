@@ -8,6 +8,8 @@ Takes results from a single subject test and posts it to the back end database.
 Posting demographic data to back end.
 
 #### newTable.php
+Create a new table on the back end.
+
 #### postToServer.php
 #### process.php
 #### readTable.php
