@@ -2,7 +2,7 @@
 Takes results from a subject test and posts it to the back end database.
 
 #### EXP3_postData_train.php
-
+Takes results from a single subject test and posts it to the back end database.
 
 #### consentSurvey.php
 #### newTable.php
