@@ -1,8 +1,8 @@
 #### EXP3_postData_test.php
-Takes results from a subject test and posts it to the back end database.
+Takes results from a participant test and posts it to the back end database.
 
 #### EXP3_postData_train.php
-Takes results from a single subject test and posts it to the back end database.
+Takes results from a single participant test and posts it to the back end database.
 
 #### consentSurvey.php
 Posting demographic data to back end.
@@ -20,5 +20,9 @@ Session management.
 Pings the server to get a presentation order - implements the controlled randomised presentation order of stimuli.
 
 #### trainingPage.php
+Renders the labelling environment. Participants can play a series of sounds and label them as either Foreground, Neutral or Background.
+
 #### validation.php
+Validates demographic input from participants.
+
 #### writeToTable.php
