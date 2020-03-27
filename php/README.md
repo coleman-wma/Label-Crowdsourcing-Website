@@ -17,6 +17,8 @@ Posts multiple ratings to the back end at the same time.
 Session management.
 
 #### readTable.php
+Pings the server to get a presentation order - implements the controlled randomised presentation order of stimuli.
+
 #### trainingPage.php
 #### validation.php
 #### writeToTable.php
