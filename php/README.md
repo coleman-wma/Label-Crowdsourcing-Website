@@ -11,7 +11,11 @@ Posting demographic data to back end.
 Create a new table on the back end.
 
 #### postToServer.php
+Posts multiple ratings to the back end at the same time.
+
 #### process.php
+
+
 #### readTable.php
 #### trainingPage.php
 #### validation.php
