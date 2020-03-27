@@ -25,7 +25,7 @@ https://www.w3schools.com/php/php_forms.asp
 
         $servername = "mysql2269int.cp.blacknight.com";
         $username = "u1099601_coleman";
-        $password = "Vtvvredr1746@";
+        $password = "V###########@";
         $database = "db1099601_listeningTest";
 
 // Create connection
