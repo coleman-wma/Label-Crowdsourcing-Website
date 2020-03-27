@@ -25,7 +25,7 @@ $col3 = "testPlay" . $instNum;
 
 $servername = "mysql2269int.cp.blacknight.com"; // variables for MySQL table connection
 $username = "u1099601_coleman";
-$password = "Vtvvredr1746@";
+$password = "V###########@";
 $database = "db1099601_listeningTest";
 
 // Create connection
